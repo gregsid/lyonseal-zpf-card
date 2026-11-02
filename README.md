@@ -41,7 +41,7 @@ Where this came from, exactly: the first walk of your report found it at the Cou
 | A fail: a null below … | |
 | What would convince a skeptic | |
 
-Give it to someone outside the company, dated, before the run. If you send it to me, the walk runs again on your answers; the same for your next report.
+Date it before the first run.
 
 ## How this page was made
 
