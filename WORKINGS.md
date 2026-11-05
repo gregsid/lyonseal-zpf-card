@@ -9,7 +9,7 @@
 | Gap width | 200 nm | assumed: the "illustrative gap" in your Oct 25 post (your site doesn't give the Array's) |
 | Probe light | 1.55 µm, guided along the gap | my choice |
 | Slot length | 100 µm, silver walls | my choice (gold loses most of the light within 23 µm) |
-| Input power | 10 W | your pre-seed page |
+| Input power | 10 W | your pre-seed page, as read Nov 1, 2026 |
 
 Numbers marked "estimate" are worked from these with standard physics and published data. The script, `zpf_card_workings.py`, redoes the page's calculations from these inputs (the actuator and its heat, the observable, breathing, the ledger, the light budget, the bench floor and Table B), checks itself against cases with known answers, and updates when you change the stroke, gap, drive frequency, probe wavelength, slot length, wall permittivity and the powers. Table B's four rows, the Casimir metal model and the wall materials' sound speeds are fixed in it. Figures taken from papers are in the source list at the end, under the step they support.
 
@@ -81,11 +81,10 @@ If your effect is steady or at 2Ω, heating and electrostatic forces become dire
 
 ## 5. The ledger
 
-- Your home page gives F ≤ P_rad/c for radiated light. It says anything above that "would require evidence for an additional, explicitly identified momentum-transport mechanism". At 10 W the limit is 33 nN; the pre-seed page's 3–15 mN is about 90,000–450,000 times more. Name the mechanism, and where the reaction goes, before the thrust stand. The energy half too: where the 10 W ends up.
+- Your home page gives F ≤ P_rad/c for radiated light. It says anything above that "would require evidence for an additional, explicitly identified momentum-transport mechanism". At 10 W the limit is 33 nN. Name the mechanism, and where the reaction goes, before the thrust stand. The energy half too: where the 10 W ends up.
 - An isolated system can't move its own centre of mass without coupling to something outside it (Puthoff, Little & Ibison 2002, §2.1). A static force such as the Casimir pull acts on both walls and gives no net thrust.
-- For scale: between ideal mirrors, the whole static Casimir pressure is about 0.8 Pa across a 200-nm gap and about 13 N/cm² across a 10-nm gap. Real gold or silver gives about 60% of that at 200 nm (about 0.5 Pa, measured for gold) and only about 12% at 10 nm (about 1.5 N/cm², estimate), where the force is closer to the van der Waals 1/d³ law than the Casimir 1/d⁴. The pre-seed page's 0.6–9 N/cm² is then 40% to 600% of the entire pull at 10 nm, turned into a one-way push; at the 200-nm gap assumed here it would be about 10,000 to 200,000 times the entire pull.
-- Your pre-seed page, read Nov 1, 2026, gives "~0.6–9 N thrust per cm²" and, for 100 cm² arrays, "576–10,891 N"; 0.6–9 N/cm² over 100 cm² comes to 60–900 N.
-- At the thrust stand, the standard checks are heat, forces from cables and magnetic fields, vibration and outgassing. Say which claim the stand tests: the P/c limit needs a resolution of about 10 nN, the pre-seed page's 3–15 mN about 0.1 mN.
+- For scale: between ideal mirrors, the whole static Casimir pressure is about 0.8 Pa across a 200-nm gap and about 13 N/cm² across a 10-nm gap. Real gold or silver gives about 60% of that at 200 nm (about 0.5 Pa, measured for gold) and only about 12% at 10 nm (about 1.5 N/cm², estimate), where the force is closer to the van der Waals 1/d³ law than the Casimir 1/d⁴.
+- At the thrust stand, the standard checks are heat, forces from cables and magnetic fields, vibration and outgassing. To test the P/c limit, the stand needs a resolution of about 10 nN.
 
 ## 6. The experiment
 

@@ -21,7 +21,6 @@ INPUTS = dict(
     eps_metal=complex(-129, 3.3),   # wall permittivity at the probe wavelength (silver, Johnson & Christy);
                                     # replace with your film's measured value
     P_in=10.0,              # electrical input power, W
-    claimed_thrust=(3e-3, 15e-3),   # N (pre-seed page)
     P_detected=1e-4,        # probe power reaching the detector, W
     t_integrate=3 * 3600.0, # integration time, s
     stroke_cal=0.01,        # how well the stroke is known (fraction); 0.01 = 1 %
@@ -256,8 +255,7 @@ def report(I):
 
     p("== 5. The ledger")
     F_max = I["P_in"] / c
-    lo, hi = I["claimed_thrust"]
-    p("  F <= P/c at %.0f W: %.3g N;  the claimed %.3g-%.3g N is x%.2g-x%.2g of it" % (I["P_in"], F_max, lo, hi, lo / F_max, hi / F_max))
+    p("  F <= P/c at %.0f W: %.3g N;  a stand testing it needs about %.0g N resolution" % (I["P_in"], F_max, 10 ** math.floor(math.log10(F_max))))
     for dd in (d, 10e-9):
         Pid = casimir_ideal(dd)
         Pau = casimir_pressure(dd, 9.0, 0.035)
@@ -265,7 +263,6 @@ def report(I):
           % (dd * 1e9, Pid, Pid / 1e4, Pau, Pau / Pid))
     p("  (the Drude model keeps only gold's free electrons; with its interband transitions real gold gives about 0.6 of")
     p("   ideal at 200 nm, measured, and about 0.12 at 10 nm: Decca et al. 2007; Lambrecht & Reynaud 2000)")
-    p("  pre-seed arithmetic: 0.6-9 N/cm^2 over 100 cm^2 = %.0f-%.0f N" % (0.6 * 100, 9 * 100))
 
     p("== 6. The bench floor")
     N = I["P_detected"] * I["t_integrate"] * lam / (h * c)
